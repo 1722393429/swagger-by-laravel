@@ -17,3 +17,6 @@ use Illuminate\Http\Request;
 //    return $request->user();
 //});
 
+$router->get('test',function (){
+    return 123;
+});

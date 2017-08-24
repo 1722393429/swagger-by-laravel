@@ -168,6 +168,7 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+        Dingo\Api\Provider\LaravelServiceProvider::class,
 
         /*
          * Application Service Providers...
