@@ -54,4 +54,33 @@ class Controller extends BaseController
         return $this->response()->array($senddata);
     }
 
+    /**
+     * @SWG\Swagger(
+     *      schemes={"http"},
+     *      host="swagger.dev",
+     *      basePath="/api/",
+     *      produces={"application/x.swagger.v1+json"},
+     *      consumes={"application/json"},
+     *      @SWG\Info(
+     *          version="1.0.0",
+     *          title="API 接口文档",
+     *      ),
+     * )
+     */
+
+    /**
+     * Authorized
+     * @SWG\SecurityScheme(
+     *   securityDefinition="petstore_auth",
+     *   type="oauth2",
+     *   authorizationUrl="http://swagger.dev/oauth/authorize ",
+     *   tokenUrl="http://swagger.dev/oauth/token",
+     *   flow="password",
+     *   scopes={
+     *     "read:pets": "read your pets",
+     *     "write:pets": "modify pets in your account"
+     *   }
+     * )
+     */
+
 }

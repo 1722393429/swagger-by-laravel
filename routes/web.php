@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/**
+ * 接口文档
+ */
+
+Route::get('swagger/docs', 'DocsController@docs');

@@ -6,6 +6,12 @@ namespace App\Models;
  * Class Comment 评论
  * @Auth: kingofzihua
  * @package App\Models
+ * @SWG\Definition(
+ *     required={"body"},
+ *     @SWG\Property(property="id", type="integer",description="ID",readOnly=true ),
+ *     @SWG\Property( property="body", type="string", description="内容", ),
+ *     @SWG\Property(property="author",description="作者",ref="#/definitions/User"),
+ * )
  */
 class Comment extends Model
 {
