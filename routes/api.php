@@ -17,9 +17,9 @@ use Illuminate\Http\Request;
 //    return $request->user();
 //});
 
-$router->get('test',function (){
-    return 123;
+$router->get('post/lists', 'PostController@lists');
+$router->group(['prefix' => 'post', 'middleware' => 'auth:api'], function ($router) {
+    $router->post('store', 'PostController@store');
+    $router->put('update/{post_id}', 'PostController@update');
+    $router->delete('destroy/{post_id}', 'PostController@destroy');
 });
-$router->get('/user', function () {
-    return auth()->user();
-})->middleware('auth:api');
