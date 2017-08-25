@@ -20,3 +20,6 @@ use Illuminate\Http\Request;
 $router->get('test',function (){
     return 123;
 });
+$router->get('/user', function () {
+    return auth()->user();
+})->middleware('auth:api');
